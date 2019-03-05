@@ -1,0 +1,36 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Angular Project to showcase portfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://pmburlacu@bitbucket.org/pmburlacu/portfolio.git"
+  },
+  "keywords": [
+    "angular",
+    "portfolio",
+    "cv",
+    "mean",
+    "stack",
+    "application"
+  ],
+  "author": "pmburlacu",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/pmburlacu/portfolio#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "colors": "^1.3.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.14",
+    "sentiment": "^5.0.1",
+    "twit": "^2.2.11"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
