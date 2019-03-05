@@ -2,17 +2,17 @@
 
 Created using NodeJs, Express, MongoDB, Angular and other technologies. 
 
-*This is an idea concept in it's early stages. I will be working on this tool to learn more about Natural Language Analysis and push the concept to the market. *
+*This is an idea concept in it's early stages. I will be working on this tool to learn more about Natural Language Analysis and push the concept to the market*
 
 ---
 
 ## Enterpulse
-*Enter(prise) Pulse | Life pulse of an enterprise based on social media corelation with its financial market behavior.*
+*Enter(prise) Pulse* | Life pulse of an enterprise based on social media corelation with its financial market behavior.
 
-** Description **
+**Description**
 Behavioral economics tells us human emotions profoundly affect individual behavior and decision-making. Now social media plays a major role in consumer perceptions, we want to understand if we can use this as a tool for investment. Do tweets and hashtags impact share price? Can we quantify the social media impact on stock performance? Is the public mood correlated or even predictive of financial indicators? 
 Whilst there are a large number of other firms/programs doing similar text analysis there are no uniformally accepted Index providers for Social Media Sentiment.
-** Aim **
+**Aim**
 Use Text Analytics derivied from various sources to assign a Social Media 'score' to companies. The score would give a general indication how influencial public opinion is on that particular stock. Furthermore, the aim would be to aggregate this into some form of Index to highlight how impactful social media is on that Industry/Country.
 
 ---
