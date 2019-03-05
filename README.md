@@ -1,25 +1,23 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+**Web Application**
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+Created using NodeJs, Express, MongoDB, Angular and other technologies. 
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
-
----
-
-## Edit a file
-
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
-
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+*This is an idea concept in it's early stages. I will be working on this tool to learn more about Natural Language Analysis and push the concept to the market. *
 
 ---
 
-## Create a file
+## Enterpulse
+*Enter(prise) Pulse | Life pulse of an enterprise based on social media corelation with its financial market behavior.*
+
+** Description **
+Behavioral economics tells us human emotions profoundly affect individual behavior and decision-making. Now social media plays a major role in consumer perceptions, we want to understand if we can use this as a tool for investment. Do tweets and hashtags impact share price? Can we quantify the social media impact on stock performance? Is the public mood correlated or even predictive of financial indicators? 
+Whilst there are a large number of other firms/programs doing similar text analysis there are no uniformally accepted Index providers for Social Media Sentiment.
+** Aim **
+Use Text Analytics derivied from various sources to assign a Social Media 'score' to companies. The score would give a general indication how influencial public opinion is on that particular stock. Furthermore, the aim would be to aggregate this into some form of Index to highlight how impactful social media is on that Industry/Country.
+
+---
+
+## Installation
 
 Next, you’ll add a new file to this repository.
 
