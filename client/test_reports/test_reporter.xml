@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+    <file path="C:\Development\Git\Enterpulse\client\src\app\app.component.spec.ts">
+        <testCase name="AppComponent Should create component" duration="2"/>
+        <testCase name="AppComponent should have as title &apos;client&apos;" duration="0"/>
+    </file>
+</testExecutions>

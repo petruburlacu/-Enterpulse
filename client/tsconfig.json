@@ -4,6 +4,12 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "paths": {
+      "@core/*": ["src/app/core/*"],
+      "@models": ["src/app/models/*"],
+      "@services": ["src/app/services/*"],
+      "@utils": ["src/app/utils/*"]
+    },
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
@@ -16,5 +22,9 @@
       "es2018",
       "dom"
     ]
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
   }
 }

@@ -10,6 +10,10 @@
         "statements"
       ]
     },
+    "comment-format": [
+      true,
+      "check-space"
+    ],
     "array-type": false,
     "arrow-return-shorthand": true,
     "curly": true,
@@ -30,7 +34,7 @@
     "max-classes-per-file": false,
     "max-line-length": [
       true,
-      140
+      250
     ],
     "member-ordering": [
       true,
@@ -53,7 +57,7 @@
     ],
     "no-empty": false,
     "no-inferrable-types": [
-      true,
+      false,
       "ignore-params"
     ],
     "no-non-null-assertion": true,
@@ -121,6 +125,8 @@
         "check-typecast"
       ]
     },
+    "trailing-comma": false,
+
     "component-class-suffix": true,
     "contextual-lifecycle": true,
     "directive-class-suffix": true,

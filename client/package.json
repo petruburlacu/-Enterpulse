@@ -4,8 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
+    "startProxy": "ng serve --proxy-config proxy.conf.json --base-href /",
+    "build": "ng build --prod --crossOrigin use-credentials",
+    "test": "jest --coverage",
+    "test:ci": "jest --runInBand",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -19,6 +21,9 @@
     "@angular/platform-browser": "~10.1.5",
     "@angular/platform-browser-dynamic": "~10.1.5",
     "@angular/router": "~10.1.5",
+    "classlist.js": "^1.1.20150312",
+    "jest-junit": "^12.0.0",
+    "jest-sonar-reporter": "^2.0.0",
     "ng-zorro-antd": "^10.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
@@ -30,20 +35,44 @@
     "@angular/compiler-cli": "~10.1.5",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/jest": "^26.0.14",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
-    "jasmine-core": "~3.6.0",
-    "jasmine-spec-reporter": "~5.0.0",
-    "karma": "~5.0.0",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage-istanbul-reporter": "~3.0.2",
-    "karma-jasmine": "~4.0.0",
-    "karma-jasmine-html-reporter": "^1.5.0",
+    "jest": "^26.5.3",
+    "jest-preset-angular": "^8.3.1",
     "less": "^3.12.2",
     "less-plugin-clean-css": "^1.5.1",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/dist/"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setup-jest.ts"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!angular-shepherd|disable-scroll)"
+    ],
+    "testURL": "http://localhost/",
+    "testResultsProcessor": "jest-sonar-reporter",
+    "reporters": [
+      "default",
+      "jest-junit"
+    ]
+  },
+  "jest-junit": {
+    "outputDirectory": "./test_reports",
+    "outputName": "junit.xml"
+  },
+  "jestSonar": {
+    "reportPath": "./test_reports",
+    "reportFile": "test_reporter.xml",
+    "indent": 4
   }
 }

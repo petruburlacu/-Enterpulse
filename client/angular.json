@@ -33,9 +33,12 @@
               }
             ],
             "styles": [
+              "src/assets/libs/pace/pace.less",
               "src/styles.less"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/libs/pace/pace.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -83,23 +86,6 @@
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "client:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.less"
-            ],
-            "scripts": []
           }
         },
         "lint": {
