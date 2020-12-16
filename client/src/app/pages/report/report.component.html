@@ -1,0 +1,15 @@
+<nz-spin [nzSpinning]="isLoading">
+    <h2>Insights for: {{ticker}}</h2>
+
+    <nz-card [nzLoading]="isStockChartLoading" class="m-btm">
+        <app-stock-chart *ngIf="stockData.length > 0" [stockTickerName]="ticker" [stockData]="stockData"></app-stock-chart>
+    </nz-card>
+
+    <nz-card [nzLoading]="isTrendChartLoading" class="m-btm">
+        <app-trend-chart *ngIf="sentimentData.length > 0" [sentimentData]="sentimentData"></app-trend-chart>
+    </nz-card>
+
+    <nz-card [nzLoading]="isTrendChartLoading" class="m-btm">
+        <app-table *ngIf="headlinesData.length > 0" [tableData]="headlinesData"></app-table>
+    </nz-card>
+</nz-spin>

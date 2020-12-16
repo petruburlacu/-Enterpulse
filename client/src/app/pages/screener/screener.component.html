@@ -1,0 +1,17 @@
+<h1 *ngIf="inputTickerValue !== ''">{{inputTickerValue}}</h1>
+<h1 *ngIf="inputTickerValue === ''">search.</h1>
+
+<nz-input-group nzSearch [nzAddOnAfter]="suffixButton">
+    <input nz-input type="text" placeholder="Search for ticker" autocomplete="off" autofocus
+        (ngModelChange)="onInputSearch($event)" [(ngModel)]="inputTickerValue" [nzAutocomplete]="autoCompleteTicker">
+    <ng-template #suffixButton>
+        <button nz-button nzType="primary" nzSearch (click)="getReport()" [nzLoading]="isLoading" [disabled]="inputTickerValue.length === 0">Submit</button>
+    </ng-template>
+</nz-input-group>
+
+<nz-autocomplete #autoCompleteTicker [nzBackfill]="true">
+    <nz-auto-option *ngFor="let ticker of filteredTickerData; trackBy: trackByFn" [nzValue]="ticker.symbol" (click)="onSelection(ticker)">
+        <span>{{ticker.symbol}} <nz-divider nzType="vertical"></nz-divider> {{ticker.name}}</span>
+        <span class="search-item-right">{{ ticker.country }}</span>
+    </nz-auto-option>
+</nz-autocomplete>
