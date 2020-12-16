@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/client",
+            "outputPath": "../server/modules/app/static",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -34,11 +34,16 @@
             ],
             "styles": [
               "src/assets/libs/pace/pace.less",
+              "src/assets/libs/bootstrap/bootstrap.min.css",
+              "src/assets/styles/sweep-bottom.less",
               "src/styles.less"
             ],
             "scripts": [
-              "src/assets/libs/pace/pace.min.js"
-            ]
+              "src/assets/libs/pace/pace.min.js",
+              "src/assets/libs/bootstrap/jquery.min.js",
+              "src/assets/libs/bootstrap/bootstrap.bundle.min.js"
+            ],
+            "allowedCommonJsDependencies": ["echarts", "tinycolor2"]
           },
           "configurations": {
             "production": {
@@ -74,7 +79,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "client:build"
+            "browserTarget": "client:build",
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {

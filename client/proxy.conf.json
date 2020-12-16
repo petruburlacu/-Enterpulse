@@ -1,12 +1,6 @@
 {
-    "/enterpulse/": {
-        "target": "http://localhost:8080",
-        "secure": false,
-        "headers": { "Authorization": "Basic ADD_YOUR_BASE_64_CREDENTIALS_ONLY_HERE" }
+    "/api": {
+        "target": "http://localhost:5000",
+        "secure": false
     }
-    // "/javascript/": {
-    //     "target": "https://customdomain.com/",
-    //     "secure": false,
-    //     "changeOrigin": true
-    // }
 }

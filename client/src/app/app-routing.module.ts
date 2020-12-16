@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  { path: '', component: AppComponent, data: {title: 'Enterpulse', breadcrumb: 'Home'} },
-  { path: '**', component: AppComponent, data: {title: 'Enterpulse', breadcrumb: 'Wondering'} },
+  { path: '', pathMatch: 'full', redirectTo: '/screener' },
+  { path: 'screener', loadChildren: () => import('./pages/screener/screener.module').then(m => m.ScreenerModule), data: {title: 'Enterpulse', breadcrumb: 'Screener'} },
+  { path: '**', redirectTo: '/screener' },
 ];
 
 @NgModule({

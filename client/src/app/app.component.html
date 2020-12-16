@@ -1,3 +1,52 @@
-<div style="display: flex;align-items: center;justify-content: center;height: 100%;width: 100%;">
-  <img height="300" src="https://img.alicdn.com/tfs/TB1X.qJJgHqK1RjSZFgXXa7JXXa-89-131.svg">
-</div>
+<nz-layout class="layout">
+  <header>
+    <div class="collapse bg-dark" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <h4 class="text-white">Enter(prise) Pulse </h4>
+            <p class="text-muted">Life pulse of an enterprise based on media sentiment and
+              its financial market behavior.</p>
+            <p class="text-muted">This tool uses Text Analytics derivied from various sources to assign a Social Media 'score' to
+              companies. The score would give a general indication how influencial public opinion is on that particular
+              stock</p>
+          </div>
+          <div class="col-sm-4 offset-md-1 py-4">
+            <h4 class="text-white">Additional</h4>
+            <ul nz-menu nzMode="vertical" style="background-color: inherit; color: #ffffff;" class="list-unstyled">
+              <li class="sweep-to-bottom" *ngFor="let item of navMenu" nz-menu-item (click)="item.action()"
+                style="padding-left: 0;">
+                <span>{{item.title}}</span>
+                <i nz-icon [nzType]="item.icon" *ngIf="item.icon" style="margin-left: 5px; vertical-align: 0;"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm" style="padding: 0; line-height: 64px;">
+      <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <i nz-icon nzType="fund" nzTheme="fill" style="margin-right: 5px;"></i>
+          <strong>EnterPulse</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+          aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nz-content class="container">
+    <nz-breadcrumb [nzAutoGenerate]="true">
+      <nz-breadcrumb-item>Enterpulse</nz-breadcrumb-item>
+    </nz-breadcrumb>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </nz-content>
+  <nz-footer class="container">Powered by <a style="color: rgba(0, 0, 0, 0.65);"
+      href="https://github.com/petruburlacu/wapplate"><strong>WAPPLATE</strong></a> ©2019 by Petru-Marian Burlacu
+  </nz-footer>
+</nz-layout>

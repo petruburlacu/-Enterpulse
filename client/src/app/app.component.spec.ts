@@ -11,9 +11,5 @@ describe('AppComponent', () => {
 
   test('Should create component', () => {
     expect(appInstance).toBeTruthy();
-});
-
-  it(`should have as title 'client'`, () => {
-    expect(appInstance.title).toEqual('client');
   });
 });
