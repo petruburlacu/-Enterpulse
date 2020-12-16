@@ -1,0 +1,27 @@
+<nz-table #enterpulseTable [(nzData)]="tableData" [nzLoading]="isLoading"  [nzVirtualForTrackBy]="trackByIndex"
+    [nzFrontPagination]="false" [nzShowPagination]="false" [nzBordered]="false" [nzNoResult]="null"
+    nzVirtualScroll [nzVirtualItemSize]="50" [nzVirtualMaxBufferPx]="1200" [nzVirtualMinBufferPx]="800" templateCacheSize="0" 
+    [nzScroll]="{ y: '50vh'}" [nzFooter]="'Number of entries: ' + enterpulseTable.data.length" [nzSize]="'small'">
+
+    <thead #tableHeader>
+        <tr>
+            <th *ngFor="let column of tableColumns" nzSortKey="column.field" nzShowSort="{{column.sort}}" nzWidth="{{column.width}}">
+                {{column.header}}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-template nz-virtual-scroll let-data let-index="index">
+            <ng-container [ngTemplateOutlet]="setTableTemplate()" [ngTemplateOutletContext]="{data:data}"></ng-container>
+        </ng-template>
+    </tbody>
+</nz-table>
+
+<ng-template #defaultTemplate let-data="data" let-index="index">
+    <tr>
+        <td nzBreakWord><span>{{data.date}}</span></td>
+        <td nzBreakWord><span>{{data.text}}</span></td>
+        <td nzBreakWord><span>{{data.vader_score}}</span></td>
+        <td nzBreakWord><span>{{data.bert_score}} ({{data.bert_sentiment}})</span></td>
+    </tr>
+</ng-template>
